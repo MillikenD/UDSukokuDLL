@@ -5,4 +5,4 @@
  * @author DBT46
  *
  */
-package pkgGame;
+package pkgTest;
