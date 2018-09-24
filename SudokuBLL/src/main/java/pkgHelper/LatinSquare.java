@@ -11,6 +11,8 @@ public class LatinSquare {
 	 * @since Lab #1
 	 */
 	private int[][] LatinSquare;
+	
+	private boolean bIgnoreZero;
 
 	/**
 	 * No-arg constructor, make it public, don't do anything in the constructor
@@ -68,6 +70,8 @@ public class LatinSquare {
 	 *            - one dimensional array to check for duplicates
 	 * @return - returns 'true' if any of the elements are duplicate
 	 */
+	
+	
 	public boolean hasDuplicates(int[] arr) {
 
 		// TODO: Return 'true' if any element in arr is duplicate
@@ -83,6 +87,14 @@ public class LatinSquare {
 			}
 		}
 		return hasDuplicates;
+	}
+
+	public boolean isbIgnoreZero() {
+		return bIgnoreZero;
+	}
+
+	public void setbIgnoreZero(boolean bIgnoreZero) {
+		this.bIgnoreZero = bIgnoreZero;
 	}
 
 	/**

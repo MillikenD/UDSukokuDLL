@@ -63,37 +63,12 @@ public class Sudoku extends LatinSquare
 	{
 		if(iCol >= iSize || iRow >= iSize)
 			return null;
-		int [][] myPuzzle = getPuzzle();
-		int[] region = new int[iSize];
 		int RegionCol = iCol / iSqrtSize;
 		int RegionRow = iRow / iSqrtSize;
-		int place = 0;
-		for(int Col = iSqrtSize*RegionCol;Col < iSqrtSize*(RegionCol + 1); Col++)
-		{
-			for(int Row = iSqrtSize*RegionRow; Row < iSqrtSize*(RegionRow + 1); Row++)
-			{
-				region[place] = myPuzzle[Col][Row];
-				place++;
-			}
-		}
-		return region;
+		int region = RegionCol + (iSqrtSize * RegionRow);
+		return getRegion(region);
 	}
 	
-	protected boolean isPartialSudoku()
-	{
-		return false;
-	}
-	
-	protected boolean isSudoku()
-	{
-		return false;
-	}
-	
-	protected boolean isValidValue(int iCol, int iRow, int iValue)
-	{
-		return false;
-	}
-			
 
 }
 
