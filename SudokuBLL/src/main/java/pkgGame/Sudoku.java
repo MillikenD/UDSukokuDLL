@@ -69,7 +69,24 @@ public class Sudoku extends LatinSquare
 		return getRegion(region);
 	}
 	
-
+	public void setRegion(int r) throws Exception
+	{
+		if (r > iSize)
+			throw new Exception("input must be a valid region");
+		int CRange = r % iSqrtSize;
+		int RRange = r / iSqrtSize;
+		int place = 1;
+		for(int Col = iSqrtSize*CRange; Col < iSqrtSize*(CRange + 1); Col++)
+		{
+			for(int Row = iSqrtSize*RRange; Row < iSqrtSize*(RRange + 1); Row++)
+			{
+				getPuzzle()[Col][Row] = place;
+				place++;
+			}
+		}
+	}
+	
+	
 }
 
 

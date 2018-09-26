@@ -157,7 +157,7 @@ public class LatinSquare {
 		return hasAllValues;
 
 	}
-
+	
 	/**
 	 * getColumn - return a one-dimension array from a given column in the
 	 * LatinSquare <br>

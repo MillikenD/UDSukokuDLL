@@ -41,7 +41,6 @@ public class SudokuTest {
 		int[][] myArray = { {1,2,3,4}, {2,3,4,1}, {3,4,1,2}, {4,1,2,3} };
 		int[] myRegion = {1,2,2,3};
 		Sudoku s = new Sudoku(myArray);
-		System.out.print(Arrays.toString(s.getRegion(1,0)));
 		
 		assertTrue(Arrays.equals(s.getRegion(1, 0), myRegion));
 	}
@@ -70,6 +69,34 @@ public class SudokuTest {
 		Sudoku s = new Sudoku(myArray);		
 		assertNull(s.getRegion(0,4));
 	}
+	
+	@Test
+	public void setRegionTest() throws Exception
+	{
+		int[][] myArray = { {0,0,0,0}, {0,0,0,0}, {0,0,0,0}, {0,0,0,0} };
+		Sudoku s = new Sudoku(myArray);
+		int[][] finalArray = { {0,0,0,0}, {0,0,0,0}, {0,0,1,2}, {0,0,3,4} };
+		s.setRegion(3);
+		assertTrue(Arrays.deepEquals(s.getPuzzle(), finalArray));
+	}
+	
+	
+	
+	
+	
+	
 
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
